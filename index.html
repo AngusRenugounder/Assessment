@@ -27,8 +27,21 @@
   BODY
 ****************************************************-->
 <body>
-  <script src="game.js"></script>
+<input type="text" id="nameInput" placeholder="Enter your name">
+  <label for="quantity">Enter Your Age:</label>
+  <input type="number" id="age" name="quantity" min="1" max="99">
+<button onclick="getUserDetails()">Submit</button>
 
+<script>
+function getUserDetails() {
+    var name = document.getElementById("nameInput").value;
+    sessionStorage.setItem('name', name);
+
+    var age = document.getElementById("age").value;
+    sessionStorage.setItem('age', age);
+  window.location = "start.html";
+}
+</script>
 </body>
 </html>
 <!--***************************************************
